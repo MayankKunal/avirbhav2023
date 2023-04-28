@@ -1,0 +1,227 @@
+<%- include("header") -%>
+
+  <title>Live Score</title>
+
+  <body class="formBody liveScore">
+
+    <div class="mgtop"></div>
+    <div data-aos="zoom-in-down">
+      <div class="d-grid gap-2 d-md-block scoreButtonGroup">
+        <button
+          class="btn btn-lg btn-danger scoreButton"
+          type="button"
+          style="border-radius: 20px;">
+          Agniastra
+        </button>
+      </div>
+      <div class="card col-sm-12 mx-auto ">
+        <div class="card-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">S.No</th>
+                <th scope="col">Event Name</th>
+                <th scope="col">Score</th>
+                <th scope="col">Penalty</th>
+                <th scope="col">Position</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% let i=0; let totalScore=0; liveScore.agniastra.forEach(score=> { i++; totalScore += score.score -score.penalty; %>
+                
+                <tr class="table-danger">
+                  <th scope="row">
+                    <%= i %>
+                  </th>
+                  <td>
+                    <%= score.eventName %>
+                  </td>
+                  <td>
+                    <%= score.score %>
+                  </td>
+                  <td>-<%= score.penalty %>
+                  </td>
+                  <td>
+                    <%= score.position %>
+                  </td>
+                </tr>
+                <% }) %>
+            </tbody>
+          </table>
+          <tr class="table-danger">
+            <th scope="row">Total Score: </th>
+            <td class="totalScore">
+              <%= totalScore %>
+            </td>
+          </tr>
+
+        </div>
+      </div>
+    </div>
+    <div data-aos="zoom-in-down">
+      <div class="d-grid gap-2 d-md-block scoreButtonGroup">
+        <button
+          class="btn btn-lg btn-success scoreButton"
+          type="button"
+          style="border-radius: 20px;">
+          Nandiastra
+        </button>
+      </div>
+      <div class="card col-sm-12 mx-auto ">
+        <div class="card-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">S.No</th>
+                <th scope="col">Event Name</th>
+                <th scope="col">Score</th>
+                <th scope="col">Penalty</th>
+                <th scope="col">Position</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% let j=0; totalScore=0; liveScore.nandiastra.forEach(score=> { j++; totalScore += score.score - score.penalty; %>
+               
+                <tr class="table-success">
+                  <th scope="row">
+                    <%= j %>
+                  </th>
+                  <td>
+                    <%= score.eventName %>
+                  </td>
+                  <td>
+                    <%= score.score %>
+                  </td>
+                  <td>-<%= score.penalty %>
+                  </td>
+                  <td>
+                    <%= score.position %>
+                  </td>
+                </tr>
+                <% }) %>
+            </tbody>
+          </table>
+          <tr class="table-danger">
+            <th scope="row">Total Score: </th>
+            <td class="totalScore">
+              <%= totalScore %>
+            </td>
+          </tr>
+        </div>
+      </div>
+    </div>
+    <div data-aos="zoom-in-down">
+      <div class="d-grid gap-2 d-md-block scoreButtonGroup">
+        <button
+          class="btn btn-lg btn-warning scoreButton"
+          type="button"
+          style="border-radius: 20px;">
+          Vayuastra
+        </button>
+      </div>
+
+      <div class="card col-sm-12 mx-auto">
+        <div class="card-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">S.No</th>
+                <th scope="col">Event Name</th>
+                <th scope="col">Score</th>
+                <th scope="col">Penalty</th>
+                <th scope="col">Position</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% let k=0; totalScore=0; liveScore.vayuastra.forEach(score=> { k++; totalScore += score.score -score.penalty; %>
+                
+                <tr class="table-warning">
+                  <th scope="row">
+                    <%= k %>
+                  </th>
+                  <td>
+                    <%= score.eventName %>
+                  </td>
+                  <td>
+                    <%= score.score %>
+                  </td>
+                  <td>-<%= score.penalty %>
+                  </td>
+                  <td>
+                    <%= score.position %>
+                  </td>
+                </tr>
+                <% }) %>
+            </tbody>
+          </table>
+          <tr class="table-danger">
+            <th scope="row">Total Score: </th>
+            <td class="totalScore">
+              <%= totalScore %>
+            </td>
+          </tr>
+        </div>
+      </div>
+    </div>
+    <div data-aos="zoom-in-down">
+
+      <div class="d-grid gap-2 d-md-block scoreButtonGroup">
+        <button
+          class="btn btn-lg btn-primary scoreButton"
+          type="button"
+          style="border-radius: 20px;">
+          Jalastra
+        </button>
+      </div>
+
+      <div class="card col-sm-12 mx-auto">
+        <div class="card-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">S.No</th>
+                <th scope="col">Event Name</th>
+                <th scope="col">Score</th>
+                <th scope="col">Penalty</th>
+                <th scope="col">Position</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% let l=0; totalScore=0; liveScore.jalastra.forEach(score=> { l++; totalScore += score.score -score.penalty; %>
+                
+                <tr class="table-primary">
+                  <th scope="row">
+                    <%= l %>
+                  </th>
+                  <td>
+                    <%= score.eventName %>
+                  </td>
+                  <td>
+                    <%= score.score %>
+                  </td>
+                  <td>-<%= score.penalty %>
+                  </td>
+                  <td>
+                    <%= score.position %>
+                  </td>
+                </tr>
+                <% }) %>
+            </tbody>
+          </table>
+          <tr class="table-danger">
+            <th scope="row">Total Score: </th>
+            <td class="totalScore">
+              <%= totalScore %>
+            </td>
+          </tr>
+        </div>
+      </div>
+    </div>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+    <div class="mgtop"></div>
+    <%- include("footer") -%>

@@ -1,0 +1,71 @@
+<%- include("header") -%>
+    <title>Admin Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: rgb(238, 174, 202);
+        background: radial-gradient(
+          circle,
+          rgba(238, 174, 202, 1) 0%,
+          rgba(148, 187, 233, 1) 100%
+        );
+      }
+    </style>
+  </head>
+  <body class="formBody">
+    <div class="admindash">
+        <div class="mgtop"></div>
+        <div class="mgtop"></div>
+      <h1> Admin Dashboard </h1>
+      <img
+        class="mb-4"
+        src="images/AvirbhavLogo2.png"
+        alt="logo"
+        width="250"
+        height="250"
+      />
+
+      <form method="post" action="/admindashboard">
+        <input type="hidden" name="authCode" value="<%= authCode %>" />
+        <button
+          type="submit"
+          name="admin"
+          value="addEvents"
+          class="btn-pink bt"
+
+        >
+          ADD EVENTS
+        </button>
+        
+        <button
+          type="submit"
+          name="admin"
+          value="pointsUpdate"
+          class="btn-pink bt"
+        >
+          UPDATE POINTS
+        </button>
+        <button
+          type="submit"
+          name="admin"
+          value="changeEventsStatus"
+          class="btn-pink bt"
+        >
+          CHANGE EVENTS STATUS
+        </button>
+        <button
+          type="submit"
+          name="admin"
+          value="deleteEvents"
+          class="btn-pink bt"
+        >
+          Delete Events
+        </button>
+      </form>
+    </div>
+    <%- include("footer") -%>

@@ -1,0 +1,198 @@
+<%- include("header") -%>
+
+  <title>Events List</title>
+
+  <body class="formBody liveScore">
+    <div class="mgtop"></div>
+
+    <div data-aos="zoom-in-down">
+      <div class="d-grid gap-2 d-md-block eventButtonGroup">
+        <button class="btn btn-lg btn-warning eventButton" type="button" style="border-radius: 40px;">
+          Cultural
+        </button>
+      </div>
+      <div class="card  col-sm-12 mx-auto ongoing">
+        <div class="card-body">
+          <table class="table ">
+            <thead class=" align-content-center">
+              <tr>
+                <th scope="col">S.No</th>
+                <th scope="col">Event Name</th>
+                <th scope="col">Start</th>
+                <th scope="col">End</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% let i=0; eventsList.forEach(event=> { if(event.status ==="cultural"){ i++;%>
+                <tr>
+                  <th scope="row">
+                    <%= i %>
+                  </th>
+                  <td>
+                    <%= event.eventName %>
+                  </td>
+                  <td>
+                    <% let startDate=event.startDate; if (startDate=="" ){startDate="Not Decleared" }; %>
+                      <%= startDate %>
+                        <%=
+                          event.startTime %>
+                  </td>
+                  <td>
+                    <% let endDate=event.endDate; if (endDate=="" ){endDate="Not Decleared" }; %>
+                      <%= endDate %>
+                        <%=
+                          event.endTime %>
+                  </td>
+                </tr>
+                <% }}) %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div data-aos="zoom-in-down">
+      <div class="d-grid gap-2 d-md-block eventButtonGroup">
+        <button class="btn btn-lg btn-primary eventButton" type="button" style="border-radius: 40px;">
+          Technical
+        </button>
+      </div>
+      <div class="card  col-sm-12 mx-auto upcoming">
+        <div class="card-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">S.No</th>
+                <th scope="col">Event Name</th>
+                <th scope="col">Start</th>
+                <th scope="col">End</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% let j=0; eventsList.forEach(event=> { if(event.status == "technical"){ j++;%>
+                <tr>
+                  <th scope="row">
+                    <%= j %>
+                  </th>
+                  <td>
+                    <%= event.eventName %>
+                  </td>
+                  <td>
+                    <% let startDate=event.startDate; if (startDate=="" ){startDate="Not Decleared" }; %>
+                      <%= startDate %>
+                        <%=
+                          event.startTime %>
+                  </td>
+                  <td>
+                    <% let endDate=event.endDate; if (endDate=="" ){endDate="Not Decleared" }; %>
+                      <%= endDate %>
+                        <%=
+                          event.endTime %>
+                  </td>
+                </tr>
+                <% }}) %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div data-aos="zoom-in-down">
+      <div class="d-grid gap-2 d-md-block eventButtonGroup">
+        <button class="btn btn-lg btn-success eventButton" type="button" style="border-radius: 40px;">
+          Non-Technical
+        </button>
+      </div>
+
+      <div class="card  col-sm-12 mx-auto completed">
+        <div class="card-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">S.No</th>
+                <th scope="col">Event Name</th>
+                <th scope="col">Start</th>
+                <th scope="col">End</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% let k=0; eventsList.forEach(event=> { if(event.status ==
+                "nontechnical"){ k++;%>
+                <tr>
+                  <th scope="row">
+                    <%= k %>
+                  </th>
+                  <td>
+                    <%= event.eventName %>
+                  </td>
+                  <td>
+                    <% let startDate=event.startDate; if (startDate=="" ){startDate="Not Decleared" }; %>
+                      <%= startDate %>
+                        <%=
+                          event.startTime %>
+                  </td>
+                  <td>
+                    <% let endDate=event.endDate; if (endDate=="" ){endDate="Not Decleared" }; %>
+                      <%= endDate %>
+                        <%=
+                          event.endTime %>
+                  </td>
+                </tr>
+                <% }}) %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+ <div data-aos="zoom-in-down">
+      <div class="d-grid gap-2 d-md-block eventButtonGroup">
+        <button class="btn btn-lg btn-primary eventButton" type="button" style="border-radius: 40px;">
+          Sports
+        </button>
+      </div>
+      <div class="card  col-sm-12 mx-auto upcoming">
+        <div class="card-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">S.No</th>
+                <th scope="col">Event Name</th>
+                <th scope="col">Start</th>
+                <th scope="col">End</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% let l=0; eventsList.forEach(event=> { if(event.status == "sports"){ l++;%>
+                <tr>
+                  <th scope="row">
+                    <%= l %>
+                  </th>
+                  <td>
+                    <%= event.eventName %>
+                  </td>
+                  <td>
+                    <% let startDate=event.startDate; if (startDate=="" ){startDate="Not Decleared" }; %>
+                      <%= startDate %>
+                        <%=
+                          event.startTime %>
+                  </td>
+                  <td>
+                    <% let endDate=event.endDate; if (endDate=="" ){endDate="Not Decleared" }; %>
+                      <%= endDate %>
+                        <%=
+                          event.endTime %>
+                  </td>
+                </tr>
+                <% }}) %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+    <div class="mgtop"></div>
+    <%- include("footer") -%>
+  </body>

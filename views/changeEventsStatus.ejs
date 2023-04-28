@@ -1,0 +1,56 @@
+<%- include("header") -%>
+
+
+    <title>Change Events Status</title>
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/4.0/examples/sign-in/"
+    />
+
+    <!-- Bootstrap core CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom styles for this template -->
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+
+  <body class="text-center formBody">
+      
+      <form class="form-signin" method="post" action="/changeeventsstatus">
+        <img class="mb-4" src="/images/AvirbhavLogo2.png" alt="" width="200" height="200" />
+        <div
+          class="status alert alert-success"
+          style="display: <%= display %>; max-width: 250px; margin: auto"
+        >
+          Changed Successfully...
+        </div>
+      <h1 class="h3 mb-3 font-weight-bold">Change Event Status</h1>
+
+      <select name="eventName" class="dp">
+        <% let i=0; eventsList.forEach(event => { i++;%>
+        <option value="<%= event.eventName %>"><%= i %>. <%= event.eventName %></option>
+        <% }) %>
+      </select>
+      <select name="status" class=" dp">
+        <option value="technical"> Technical
+        </option>
+        <option value="nontechnical"> Non-Technical
+        </option>
+        <option value="sports"> Sports
+        </option>
+        <option value="cultural"> Cultural
+        </option>
+    </select>
+      <input type="hidden" name="authCode" value="<%= authCode %>" />
+      <button class="btn btn-lg btn-primary btn-block" type="submit">
+        Submit
+      </button>
+    </form>
+    <div class="mgtop"></div>
+    <%- include("footer") -%>

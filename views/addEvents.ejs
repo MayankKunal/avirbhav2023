@@ -1,0 +1,47 @@
+<%- include("header") -%>
+
+    <title>Add Events</title>
+    <body class="formBody">
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  <body class="text-center formBody">
+    
+    <form class="form-signin" method="post" action="/addEvents">
+      <img class="mb-4 img" src="images/AvirbhavLogo2.png" alt="logo" width="250" height="250"><br>
+      <div class="status alert alert-success" style="display:<%= display %>; max-width: 250px; margin: auto;">Added Successfully...</div>
+      <h1 class="h3 mb-3 font-weight-bold">Add Event</h1>
+
+      <input type="text" id="eventName" class="form-control" placeholder="Event Name" name="eventName" required autofocus>
+
+      <input placeholder=" StartingDate" name="startDate" class="form-control" type="text" onfocus="(this.type='date')" id="sdate">
+      
+      <input placeholder=" StartingTime" name="startTime" class="form-control" type="text" onfocus="(this.type='time')" id="stime">
+      
+      <input placeholder=" EndingDate" name="endDate" class="form-control" type="text" onfocus="(this.type='date')" id="edate">
+
+      <input placeholder=" EndingTime" name="endTime" class="form-control" type="text" onfocus="(this.type='time')" id="etime">
+
+      <select name="status" class=" dp">
+        <option value="technical"> Technical
+        </option>
+        <option value="nontechnical"> Non-Technical
+        </option>
+        <option value="sports"> Sports
+        </option>
+        <option value="cultural"> Cultural
+        </option>
+    </select>
+
+      <input type="hidden" name="authCode" value="<%= authCode %>">
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Add Event</button>
+    </form>
+    <div class="mgtop"></div>
+    <%- include("footer") -%>
