@@ -8,8 +8,9 @@
 }
 .samarkan{
   font-family: 'Samarkan', sans-serif;
-  font-size: 100px;
-  color: black;
+  font-size: 370%;
+  
+  color: white;
 }
 html {
   scroll-behavior: smooth;
@@ -314,6 +315,7 @@ body {
   background-size: cover;
   color: black;
 }
+
 
 .avirbhav img {
   max-height: 40vh;
