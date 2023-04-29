@@ -158,6 +158,7 @@ body {
     position: absolute;
     left: 20px;
     top: 18px;
+   background-color: white;
   }
 
   .bar1,
@@ -271,13 +272,15 @@ body {
 }
 
 .jkintro {
-  background-image: url("/images/ranjan30.png");
-  opacity: 4.5;
-  z-index: -1;
+  background-image: url("/images/head.jpg");
+  /* opacity: 4.5;
+  z-index: -1; */
+  /* width: 100%; */
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  /* min-width: 1200px; */
+  background-size: cover; 
+  
+   /* min-width: 1200px;  */
   text-align: center;
   color: aliceblue;
 }
